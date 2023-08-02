@@ -43,3 +43,20 @@ print(quote)
 famPerson = 'Bob Dole'
 quote = 'Let them eat cake'
 print(f'{famPerson} once said \n\t"{quote}"')
+
+
+# numbers
+
+num = 4/2
+print(num)
+
+
+x, y, z = 0, 0, 0
+print(x, y, z)
+print(4+4)
+print(4*2)
+print(16/2)
+print(10-2)
+
+favNum = 13
+print(f"Favorite number is {favNum}!")
