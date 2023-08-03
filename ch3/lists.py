@@ -34,3 +34,47 @@ print(motorcycles)
 # use the remove method if you are not sure of the index location
 motorcycles.remove('BMW')
 print(motorcycles)
+
+
+guestList = ['Bob', 'Isaac', 'Shannon', 'Kelly', 'Kari']
+print(f"{guestList} is invited for dinner at our place")
+print(f"Oh no {guestList[2]} cannot make it!")
+guestList[2] = 'Cory'
+print(f"{guestList} is invited for dinner at our place")
+guestList.insert(0, 'Ben')
+guestList.insert(3, 'Mitch')
+guestList.append('Dawn')
+print(
+    f"we found a bigger table and can add 3 more people {guestList[0], guestList[3], guestList[-1]} are now invited")
+print(guestList)
+
+print("Oh crap, only room for 2 people, so sorry folks")
+listLen = (len(guestList)-2)
+
+print(listLen)
+
+for i in range(listLen):
+    popList = guestList.pop(0)
+    print(f'{popList} has been uninvited for dinner')
+
+print(guestList)
+
+del guestList[-1]
+del guestList[0]
+print(guestList)
+
+
+cars = ['BMW', 'Toyota', 'Audi', 'Subaru', 'Honda']
+# cars.sort()
+print(cars)
+
+# use sorted to temp sort the list, retaining the original order
+print('Here is a list of cars')
+print(cars)
+print("n\Here is a sorted list")
+print(sorted(cars))
+print("n\Here is the reverse list")
+print(sorted(cars, reverse=True))
+print("n\Here is the list back to normal")
+print(cars)
+print(len(cars))
