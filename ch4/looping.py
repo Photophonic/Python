@@ -85,5 +85,55 @@ for i in range(3, 30):
     threes.append(i**2)
 
 
-for i in range(len(threes)):
-    print(threes[i])
+list_of_multiples_of_3 = [x for x in range(1, 100) if x % 3 == 0]
+
+print(list_of_multiples_of_3)
+
+list3 = list(range(0, 30, 3))
+print(list3)
+
+# Slicing lists
+# like range, slice values dictate the beginning and end range to work with
+discord = ['Me', 'Billy', 'Yoshi', 'Richard', 'Sabrina', 'Anthony']
+print(discord[2:5])
+
+# without an index Python will start at the beginnig
+print(discord[:4])
+# starts from designated element to the end
+print(discord[3:])
+# negative starts at the back and revereses
+print(discord[:-2])
+
+# to loop through a list with slice
+print("These people play HSR:")
+for d in discord[0:3]:
+    print(d)
+
+# use [:] to make a copy of a whole list and assign that to a new variable
+acen = discord[:]
+# to prove it is a different list
+acen.append('William')
+for soon in acen[0:]:
+    print(soon)
+
+print('the first three items are:')
+for ff in discord[0:3]:
+    print(ff)
+
+print('The middle items are:')
+for ff in discord[3:5]:
+    print(ff)
+
+print('The last ones are:')
+for ff in discord[-2:]:
+    print(ff)
+
+
+myPizza = ['Pineapple', 'Meat', 'cheese', 'sauce']
+kellyPizza = myPizza[1:]
+kellyPizza.append('sausage')
+for p in myPizza[:]:
+    print(p)
+print("\n")
+for k in kellyPizza[:]:
+    print(k)
