@@ -128,12 +128,51 @@ print('The last ones are:')
 for ff in discord[-2:]:
     print(ff)
 
+print("\n")
 
+# my pizza list
 myPizza = ['Pineapple', 'Meat', 'cheese', 'sauce']
+# slice a new list startin at index 1 (not 0)
 kellyPizza = myPizza[1:]
+# add a new item to the new list with append
 kellyPizza.append('sausage')
+# pring the first list using a for loop with an open range
 for p in myPizza[:]:
     print(p)
 print("\n")
+# pring the sencond list with same options
 for k in kellyPizza[:]:
     print(k)
+
+
+# an immutable list is known as a tuple
+# defined by () instead of []
+dimensions = (200, 50)
+print(dimensions[0])
+print(dimensions[1], "\n")
+
+# this will error since you cannot change a tuple
+# dimensions[0] = 250
+
+# looping through a tuple is similar
+for dimension in dimensions:
+    print(dimension, "\n")
+
+# Tuples can be overwriten
+dimensions = (400, 100)
+for dimension in dimensions:
+    print(dimension)
+
+print("\n")
+
+dinnerMenu = ('Pasta', 'Pizza', 'BBQ', 'Wrap')
+for meal in dinnerMenu:
+    print(meal)
+print("\n")
+
+# dinnerMenu[2] = 'taco'
+
+dinnerMenu = ('Pasta', 'Pizza', 'Taco', 'Burger')
+for meal in dinnerMenu:
+    print(meal)
+print("\n")
