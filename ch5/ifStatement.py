@@ -105,3 +105,79 @@ elif alien_color == 'red':
     print(f'You selected {alien_color} as you color. +10 points')
 else:
     print(f'You selected {alien_color} as you color, try again')
+print('\n')
+
+
+# if and lists
+# Loop through the list and check the item to determine if/else behavoir
+requestedToppings = ['mushroom', 'cheese', 'sausage', 'pepperoni']
+for topping in requestedToppings:
+    if topping == 'sausage':
+        print("We're out of sausage")
+    else:
+        print(f'adding {topping}')
+print("\nFinished the pizza\n")
+
+
+# checking if the list is not empty
+requestedToppings = []
+if requestedToppings:
+    for topping in requestedToppings:
+        if topping == 'sausage':
+            print("We're out of sausage")
+        else:
+            print(f'adding {topping}')
+    print("\nFinished the pizza\n")
+else:
+    print("That's a plain pizza")
+
+
+# using a list to validate another list
+availableToppings = ['mushroom', 'cheese', 'sausage', 'pepperoni']
+
+requestedToppings = ['cheese', 'pineapple', 'sausage']
+
+# loop through the requested list
+for requestedToping in requestedToppings:
+    # check if the current item is in the validation list
+    if requestedToping in availableToppings:
+        # if yes, add item
+        print(f'adding {topping}')
+    else:
+        # if not, so sorry
+        print(f'Sorry, we do not have {requestedToping}')
+print("\nFinished the pizza\n")
+
+
+# Try it yourself
+usernames = ['smith99', 'dole75', 'sjohns23', 'kart57', 'admin']
+
+for username in usernames:
+    if username.lower() == 'admin':
+        print(f'Hello {username} here are the reports')
+    else:
+        print(f'Hello {username}')
+print('\n')
+
+
+usernames = []
+if usernames:
+    for username in usernames:
+        if username.lower() == 'admin':
+            print(f'Hello {username} here are the reports')
+        else:
+            print(f'Hello {username}')
+else:
+    print('We need som users')
+print('\n')
+
+
+current_users = ['ssmith', 'jdodson', 'bdole', 'spooter', 'broster']
+
+new_users = ['cwass', 'Bdole', 'Trake', 'Broster', 'nright']
+
+for new_user in new_users:
+    if new_user.lower() in current_users:
+        print(f'{new_user} already exists, please pick a new name')
+    else:
+        print(f'{new_user} has been created')
