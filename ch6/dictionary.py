@@ -187,3 +187,62 @@ for alien in aliens[:5]:
 # print length of the list
 print(len(aliens))
 print('\n')
+
+
+# storing listss in dictionaries, similar to arrays in objects in JS
+pizza = {
+    'crust': 'honey wheat',
+    'toppings': ['cheese', 'ham', 'pineapple'],
+    'sauce': 'red'
+}
+
+# to print a dedicated item in the dictionary
+print(pizza['toppings'])
+print('\n')
+
+
+# or loop through them
+for topping in pizza['toppings']:
+    print(topping)
+
+# lists galor
+favoriteLanguages = {
+    'Bob': ['Unix Scripting'],
+    'Christian': ['Ruby on Rails', 'JS'],
+    'Billie': ['JS', 'Python', 'C#'],
+    'Isaac': ['VB'],
+    'Me': ['PLSQL', 'Python', 'JS']
+}
+
+# to loop through and get the key/value pairs and lopp the results
+for name, languages in favoriteLanguages.items():
+    # determine if they like more than one language
+    if len(languages) > 1:
+        print(f'{name} likes the following languages:')
+        for language in languages:
+            # \t is tab with .title() to capitalize
+            print(f'\t{language.title()}')
+    else:
+        print(f'{name} likes the following language:')
+        for language in languages:
+            # \t is tab with .title() to capitalize
+            print(f'\t{language.title()}')
+
+# dictionay in dictionary, this gets complicatd quick
+users = {
+    'semarti': {
+        'first': 'seth',
+        'last': 'martin',
+        'email': 'semarti@jocogov.org',
+    },
+    'bmaynard': {
+        'first': 'bryan',
+        'last': 'maynard',
+        'email': 'bmaynard@jocogov.org',
+    }
+}
+
+for username, user_info in users.items():
+    print(f'\nUser Name: {username.title()}')
+    fullname = f"{user_info['first']} {user_info['last']}"
+    print(fullname.title())
