@@ -27,6 +27,30 @@ class Car:
         print(f'{self.model} has {self.odometer} miles on it.')
 
 
+class Battery:
+    """A simple class for an electric car's batter"""
+
+    def __init__(self, battery_size=40):
+        """Initialize the battery settings"""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print(f'This car has a {self.battery_size}-kWh')
+
+    def upgrade_battery(self):
+        if self.battery_size < 65:
+            self.battery_size = 65
+
+    def get_range(self):
+        if self.battery_size == 40:
+            range = 200
+        elif self.battery_size >= 60:
+            range = 400
+
+        self.describe_battery()
+        print(f'The car can go {range} miles on a full charge.')
+
+
 class ElectricCar(Car):
     """class for an electric car, inheriting the Car class"""
 
@@ -38,30 +62,21 @@ class ElectricCar(Car):
 
         # now that a child class is connected, you can add your own
         # special attributes unique to this class
-        self.range = 400
+
         self.drive = '2WD'
+        self.battery = Battery()
 
     def get_range(self):
-        print(f'\nThe {self.make} {self.model} has a range of {self.drive}')
+        print(
+            # to access the properties of the battery class, preface the value with the owning class .BATTERY.BAT_SIZ
+            f'\nThe {self.make} {self.model} has a {self.battery.battery_size}-kWh battery.')
 
 
-my_Leaf = ElectricCar('Toyota', 'Rav4 Prime', '2024')
-my_Leaf.get_range()
+# my_car = ElectricCar('Toyota', 'Rav4 Prime', 2024)
 
 
-# my_car = Car('toyota', '4Runner', 2021)
-# kelly_car = Car('mini', 'countryman', 2024)
-# print(my_car.get_description())
-# print(kelly_car.get_description())
+# my_car.battery.get_range()
 
-# # access the attribute directly and update it in MY instance of the class
-# # my_car.odometer = 40000
+# my_car.battery.upgrade_battery()
 
-# # The better way to do this is through a method in the class
-# my_car.update_odometer(40000)
-
-# my_car.read_odometer()
-
-# my_car.update_odometer(50000)
-
-# my_car.read_odometer()
+# my_car.battery.get_range()

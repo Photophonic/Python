@@ -25,20 +25,20 @@ class Restaurant:
         print(f'The number of customers served is {self.served}')
 
 
-# local_restaurant = Restaurant('Long Boards', 'Hawaiian style wraps')
+class IceCream(Restaurant):
+    """Simple extended class from restaurant"""
 
-# local_pizza = Restaurant('Waldo Pizza', 'Pizza')
+    def __init__(self, name, *style):
+        """get methods and attributes of parent class"""
+        super().__init__(name, style)
 
-# local_burger = Restaurant('Snack Shack', 'Burgers and Shakes')
+        self.flavors = ['Choclate', 'Vanilla', 'Rocky Road', 'Coffee']
 
-# local_restaurant.describe_place()
-# local_pizza.describe_place()
-# local_burger.describe_place()
-
-# local_restaurant.number_served()
-# local_restaurant.update_served(50)
-# local_restaurant.number_served()
+    def describe_flavors(self):
+        for flavor in self.flavors:
+            print(flavor)
 
 
-# local_restaurant.increment_served('Day', 100)
-# local_restaurant.increment_served('Week', 1500)
+local_shop = IceCream("Betty Rae's", "Ice Cream")
+
+local_shop.describe_flavors()
