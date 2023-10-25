@@ -1,9 +1,0 @@
-# Updating pip
-https://phoenixnap.com/kb/install-pip-mac
-
-https://www.geeksforgeeks.org/how-to-install-pytest-for-python3-on-macos/#
-
-pip3 install pytest 
-
-
-use import pytest in .py file to verify

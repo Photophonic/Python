@@ -1,1 +1,0 @@
-In Python you can make lists and dictionaries In Python you can create loops that print things In Python you can import files and paths In Python you can create functions to do routine work  
