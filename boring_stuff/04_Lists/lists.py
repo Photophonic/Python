@@ -33,4 +33,24 @@ del myList[2]
 myList
 print(myList)
 
-# adding elements to a list
+print('***********')
+# using a loop with range
+for i in range(len(myList)):
+    print(myList[i])
+
+
+# multiple assignments and unpacking
+cat = ['small', 'grayish', 'murps']
+# Pythong will assign the values in the list to the order they are seen.
+size, color, disposition = cat
+# will print small
+print(size)
+
+# to return the k/v pair in a list use enumerate()
+# can be used in place of len(listName)
+movies = ['Deathproof', 'Scott Pilgrim', 'Hateful Eight', 'Fury Road']
+
+# idex will contain the list index, item is the value
+for index, items in enumerate(movies):
+    # convert index to a string
+    print('Index ' + str(index) + ' movie: ' + items)
