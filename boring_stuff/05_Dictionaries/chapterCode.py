@@ -74,3 +74,39 @@ myItems.setdefault('color', 'Greyish')
 for k, v in myItems.items():
     # need to use str() to convert the number from the value
     print('Key: ' + k.title() + ', Value: ' + str(v))
+
+print("*****************")
+
+# nested dictionaries, dictionaries in dictionaries
+# to expand on the picnic list
+# Basic data modeling example
+allGuests = {
+    'Alice': {'apples': 5, 'cups': 22},
+    'Bob': {'plates': 44, 'pretzels': 12},
+    'Sam': {'hotdogs': 12, 'buns': 9}
+}
+
+# function to accept a dictionary
+
+
+def totalBrought(guest, item):
+    # set default count
+    numBrought = 0
+    # loop through passed in dictionary
+    # key (names) will check if item is in their values
+    # if so, increment the numBrought
+    for k, v, in guest.items():
+        numBrought += v.get(item, 0)
+    # return result of counts
+    return numBrought
+
+
+# process each item of the allGuests dictionary
+print('Number of things being brought:')
+# remember to convert the number output to STR
+print(' - Apples ' + str(totalBrought(allGuests, 'apples')))
+print(' - Cups ' + str(totalBrought(allGuests, 'cups')))
+print(' - plates ' + str(totalBrought(allGuests, 'plates')))
+print(' - pretzels ' + str(totalBrought(allGuests, 'pretzels')))
+print(' - hotdogs ' + str(totalBrought(allGuests, 'hotdogs')))
+print(' - buns ' + str(totalBrought(allGuests, 'buns')))
