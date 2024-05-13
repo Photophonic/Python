@@ -1,0 +1,53 @@
+ch01
+verify in OSX, python3 --version
+
+type python3 to get REPL to run commands >>>
+(READ EVALUATE PRINT LOOP)
+exit with quit()
+
+Python is a highlevel language. Makes it easier to read/write
+
+
+ch02
+expressions - combination of values that evaluate to a single value
+statements - perform operations on values
+
+ch03
+operators are symblos that perfom operations on values
+
+ch04
+name conventions, lower_case_word, data types and string functions
+
+ch05
+User input and control flow
+
+ch06
+List and Tuples
+List hold multiple values for a user
+
+ch07
+dictionaries and sets. Data stored in key/value pairs
+Sets do not allow for duplicates
+
+ch08 loops
+Two main types, for and while. 
+
+ch09 functions
+Functions are reuseable blocks of code
+
+ch10 recursion
+Recursion is a function that calls itself
+
+ch11 scope
+Notes in py files
+
+ch12 closures
+Closure is a function having access to the scope of its parent function after the parent function has returned.
+
+ch13 fstring
+Used to format str() output
+
+ch14 modules
+small code libraries based on related features
+
+ch15 command line 
