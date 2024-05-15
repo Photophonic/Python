@@ -51,3 +51,7 @@ ch14 modules
 small code libraries based on related features
 
 ch15 command line 
+allow arguments to be passed in when run from CLI
+
+ch16 - Challenges!!!
+Three games to apply the stuff we have covered to this point

@@ -10,6 +10,8 @@ def hello(name, lang):
 
 if __name__ == "__main__":
     # Parser for command-line options
+
+    # This is all boiler plate code
     import argparse
 
     # define a parse
@@ -33,6 +35,7 @@ if __name__ == "__main__":
 
     # call the method on the parser object
     args = parser.parse_args()
+    # **** end of boiler plate
 
     # call the lang version of the funcion and hello function
     hello(args.name,args.lang)
