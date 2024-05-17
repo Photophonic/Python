@@ -8,7 +8,7 @@ def guess_number(name = 'PlayerOne'):
     # start game
     def play_guess_number():
         # gain access to the higher level variables for tracking   
-        nonlocal game_count
+        nonlocal name
         nonlocal player_wins
 
         # prompt for player input, using name in arg
