@@ -8,11 +8,11 @@ addTwo = lambda num: num + 2
 print(addTwo(4))
 
 # multi input
-sum = lambda a, b: a + b
+sum_total = lambda a, b: a + b
 
-print(sum(2, 4))
+print(sum_total(2, 4))
 
-print(sum(squared(2), addTwo(5)))
+print(sum_total(squared(2), addTwo(5)))
 
 # #############
 
@@ -56,3 +56,26 @@ odd_nums = filter(lambda num: num % 2 != 0, numbers)
 # filter will remove the values that do not meet the requirement
 for _ in odd_nums:
     print(_)
+
+from functools import reduce
+
+
+numbers = [1, 2, 3, 4, 5, 1]
+
+total = reduce(lambda acc, curr: acc + curr, numbers)
+
+print(total)
+
+# simple use of sum vs reduce
+print(sum(numbers))
+
+# better usage of reduce
+
+
+names = ["bob", "dale", "john", "sam", "rick"]
+
+# You define a lambda function using the lambda keyword, followed by the function’s inputs (arguments), a colon (:), and the function’s expression.
+# The output of a lambda function is automatically returned as the result of the expression, without needing a return statement.
+char_count = reduce(lambda acc, curr: acc + len(curr), names, 0)
+
+print(char_count)

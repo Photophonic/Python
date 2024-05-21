@@ -59,3 +59,5 @@ Three games to apply the stuff we have covered to this point
 ch17 - Lambda and higher order functions
 single expression functions  similar to anonymous functions in other languages. Handy for short lived operaionts where a full functon is not necessary.
 Higher order functions are functions that can accept functions as an argument.
+
+ch18 - Classes are like blueprints to create objects
