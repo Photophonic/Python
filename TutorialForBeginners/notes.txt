@@ -63,3 +63,5 @@ Higher order functions are functions that can accept functions as an argument.
 ch18 - Classes are like blueprints to create objects
 
 ch19 - Errors and Exceptions
+
+ch20 - OOP Project
