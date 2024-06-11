@@ -83,3 +83,12 @@ Python-dotenv reads key-value pairs from a .env file and can set them as environ
 python3 -m pip freeze > requirements.txt to create a requirements file
 
 create an ignore file for git and name it .gitignore then list the folder or files you want to exclude, e.g. .venv
+
+
+ch22 - File operations in Python
+# r = Read
+# a = append
+# w = Write
+# x = Create
+
+ch23 - Final Project
