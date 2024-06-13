@@ -92,3 +92,9 @@ ch22 - File operations in Python
 # x = Create
 
 ch23 - Final Project
+creating a web app with flask and python
+* run python3 -m venv .venv in root folder to create the virual environment
+* source .venv/bin/activate to activate the env
+* pip install requests python-dotenv flask --> to install our additional items for the venv
+* pip freeze > requirements.txt --> to create a requirements file to allow the host to know what items are required to run.
+* create .gitignore file
