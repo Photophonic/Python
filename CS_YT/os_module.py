@@ -33,7 +33,7 @@ print(os.listdir())
 print(os.stat("new.txt"))
 
 
-# to get the last modification date and in a readable format
+# to get the last modification date and in a readable format?"vdsxC"
 from datetime import datetime
 
 # get the last modified time (st_mtime)
