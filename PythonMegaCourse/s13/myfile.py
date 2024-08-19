@@ -8,3 +8,5 @@
 # df1=pd.DataFrame([[2,4,0],[10,20,30]])
 # df1 <- this will return resultes
 # top = column names, first rolumn = row names
+
+# review .ipynb files in the various folders to see how this all works.
