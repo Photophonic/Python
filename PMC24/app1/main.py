@@ -1,6 +1,16 @@
-# text = input("Enter a title: ")
-# length = len(text)
-# print(length)
+# # text = input("Enter a title: ")
+# # length = len(text)
+# # print(length)
+
+# countries = []
+# while True:
+#     country = input("Enter a country: ")
+#     countries.append(country)
+#     print(countries)
+
+# import builtins
+
+# print(dir(builtins))
 
 
 todo = []
@@ -12,7 +22,7 @@ while True:
     if user_val.upper() == "Q":
         break
 
-    todo.append(user_val)
+    todo.append(user_val.title())
 
 for item in todo:
     print(item)
