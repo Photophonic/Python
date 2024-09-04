@@ -12,45 +12,6 @@
 # print(dir(builtins))
 
 
-# todo = []
-# user_val = ""
-
-# while True:
-#     user_val = input("Enter a To Do: \n")
-
-#     if user_val.upper() == "Q":
-#         break
-
-#     todo.append(user_val.title())
-
-# for item in todo:
-#     print(item)
-
-# todo = []
-# user_action = ""
-
-# while True:
-#     user_action = input("Type add, show, edit, or quit: \n")
-
-#     match user_action.strip():
-#         case "add":
-#             user_val = input("Enter a To Do: ")
-#             todo.append(user_val.title())
-#         case "show":
-#             for item in todo:
-#                 print(item)
-#         case "edit":
-#             edit_item = int(input("Number of item to edit? "))
-#             adj_index = edit_item - 1
-#             new_todo = input("Enter a new To Do: ")
-#             todo[adj_index] = new_todo
-
-#         case "quit":
-#             break
-#         case _:
-#             pass
-
-
 # tuples and strings = immutable
 # tuples should be used when the list should not change. Use ()
 # Lists = mutable. Use []
@@ -86,6 +47,52 @@ print(ranking[rank])
 
 # Question 3
 ranking = ["Stan", "Kyle", "Kenny"]
-name = input("Enter a name for their rank: ")
+# name = input("Enter a name for their rank: ")
+name = "Stan"
 
 print(ranking.index(name))
+
+
+# Question 4
+mood = "Here"
+strength = 6.7
+rank = 2
+
+# Question 5
+color_code = (
+    ("#4062ce", "rgb(64,98,206)", "hsl(225.6,59.2%,52.9%)"),
+    ("#2f3609", "rgb(47,54,9)", "hsl(69.3,71.4%,12.4%)"),
+    ("#f19cd0", "rgb(241,156,208)", "hsl(323.3,75.2%,77.8%)"),
+)
+
+# Question 6
+serials = [
+    "hsl(225.6,59.2%,52.9%)",
+    "hsl(69.3,71.4%,12.4%)",
+    "hsl(323.3,75.2%,77.8%)",
+    "hsl(129.2,12.5%,39.2%)",
+]
+
+print(serials[2])
+
+# Question 7
+seconds = [1.23, 1.45, 1.02]
+current = 1.11
+
+seconds.append(current)
+
+print(seconds)
+
+
+# debug
+elements = ["a", "b", "c"]
+print(elements[1])
+
+elemebts = ["a", "b", "c"]
+
+new = "x"
+# new = elements[1]
+elements[1] = new
+print(elements)
+
+# Day 6 - Enumeration & f string
