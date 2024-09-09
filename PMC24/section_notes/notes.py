@@ -96,3 +96,49 @@ elements[1] = new
 print(elements)
 
 # Day 6 - Enumeration & f string
+mailing_list = ["stan", "kyle", "kenny", "cartman"]
+mailing_list.sort()
+
+for index, item in enumerate(mailing_list):
+    row = f"{index+ 1}. {item.capitalize()}"
+    print(row)
+
+print(mailing_list)
+
+# Question 1
+filenames = ["document", "report", "presentation"]
+
+for index, items in enumerate(filenames):
+    print(f"{index}-{items.capitalize()}.txt")
+
+# Question 2
+ips = ["100.122.133.105", "100.122.133.111"]
+
+user_input = int(input("Enter an index value: "))
+
+print(f"You selected {ips[user_input]}")
+
+# Question 3
+temp = [1.2, 9, "test"]
+
+# Question 4
+rainfall = [5.2, 13, "test", [1, 2, 3, 4, 5]]
+
+# Question 5
+seconds = [1.23, 1.45, 1.02, 1.11]
+removed = seconds.pop(1)
+print(removed)
+print(seconds)
+
+# Debug 1
+menu = ["pasta", "pizza", "salad"]
+
+user_choice = int(input("Enter what you would like: "))
+
+print(f"You selected {menu[user_choice]}")
+
+# Demo
+buttons = [("Stan", "Kyle", "Kenny"), ("Butters", "Craig", "Klyde")]
+
+for first, second, third in buttons:
+    print(first, second, third)
