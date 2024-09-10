@@ -1,5 +1,6 @@
 # empyt to-do list
-todo = []
+# remove list as it will be used in the add
+# todo = []
 # initialize varaible for input
 user_action = ""
 
@@ -9,9 +10,20 @@ while True:
     # python case statement to compare user_action input
     match user_action.strip():
         case "add":
-            user_val = input("Enter a To Do: ")
+            user_val = input("Enter a To Do: ") + "\n"
+            # open and read items in the list
+            file = open("app01_todo\list.txt", "r")
+            # read the contents and make a new list
+            todo = file.readlines()
+            # remember to close the file
+            file.close()
             # add to the list the capitalize user_input
             todo.append(user_val.title())
+            # open file and write to it,
+            file = open("app01_todo\list.txt", "w")
+            # witelines is a method to write from a list
+            file.writelines(todo)
+            file.close()
         case "show":
             # add enumerate to produce a list and their index
             for index, item in enumerate(todo):
