@@ -5,7 +5,7 @@
 user_action = ""
 
 while True:
-    user_action = input("Type add, show, edit, complete, or quit: \n")
+    user_action = input("Type add, show, edit, complete, or quit: \n").strip()
 
     # python case statement to compare user_action input
     match user_action.strip():
@@ -25,10 +25,15 @@ while True:
             file.writelines(todo)
             file.close()
         case "show":
+            file = open("app01_todo\list.txt", "r")
+            # read the contents and make a new list
+            todo = file.readlines()
+            # remember to close the file
+            file.close()
             # add enumerate to produce a list and their index
             for index, item in enumerate(todo):
                 # this creates two variables that can be printed
-                print(f"{index+1}-{item}")
+                print(f"{index+1}-{item}", end="")
         case "edit":
             # get the index item from the user
             edit_item = int(input("Number of item to edit? "))

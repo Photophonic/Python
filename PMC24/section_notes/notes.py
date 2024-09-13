@@ -142,3 +142,35 @@ buttons = [("Stan", "Kyle", "Kenny"), ("Butters", "Craig", "Klyde")]
 
 for first, second, third in buttons:
     print(first, second, third)
+
+
+# Day 7 Reading Files
+
+# Question 1
+file = open("section_notes/files/bear.txt", "r")
+print(file.read())
+file.close()
+
+# Question 2
+file = open("section_notes/files/bear.txt", "r")
+print(file.read().title())
+file.close()
+
+# Question 3
+file = open("section_notes/files/bear.txt", "r")
+print(len(file.read()))
+file.close()
+
+# Question 4
+file = open("section_notes/files/file.txt", "a")
+file.write("Snail")
+file.close()
+
+# Question 5
+member = input("Enter a new member: ")
+
+with open("section_notes/files/members.txt", "a") as file:
+    file.write(f"\n{member}")
+
+with open("section_notes/files/members.txt", "r") as file:
+    print(file.read())
