@@ -30,10 +30,23 @@ while True:
             todo = file.readlines()
             # remember to close the file
             file.close()
+
+            # new_todo = []
+
+            # for item in todo:
+            #     new_item = item.strip("\n")
+            #     new_todo.append(new_item)
+
+            # using list comprehension in place of the for-loop and list var
+            # new_todo = [item.strip("\n") for item in todo]
+            # for index, item in enumerate(new_todo):
+
             # add enumerate to produce a list and their index
             for index, item in enumerate(todo):
-                # this creates two variables that can be printed
-                print(f"{index+1}-{item}", end="")
+                # this creates two variables that can be printed and removes newlines
+                row = f"{index+1} - {item.strip('\n')}"
+                print(row)
+
         case "edit":
             # get the index item from the user
             edit_item = int(input("Number of item to edit? "))

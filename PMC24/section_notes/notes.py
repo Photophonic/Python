@@ -174,3 +174,67 @@ with open("section_notes/files/members.txt", "a") as file:
 
 with open("section_notes/files/members.txt", "r") as file:
     print(file.read())
+
+
+# Day 7 quiz
+new = []
+
+for i in [1, 2, 3]:
+    new.append(i + 10)
+
+print(new)
+
+
+old = [1, 2, 3]
+new = [i + 10 for i in old]
+print(new)
+
+
+# Question 1
+names = ["stan marsh", "kyle brofloski", "kenny mccormick", "eric cartman"]
+
+new_names = [name.title() for name in names]
+
+print(new_names)
+
+
+# Question 2
+usernames = ["stan 1980", "kyle2020", "cartman1123"]
+
+un_len = [len(user) for user in usernames]
+
+print(un_len)
+
+
+# Question 3
+user_entries = ["10", "19.1", "20"]
+
+new_entries = [float(entry) for entry in user_entries]
+
+print(new_entries)
+
+# Question 4
+user_entries = ["10", "19.1", "20"]
+
+new_entries = [float(entry) for entry in user_entries]
+
+print(sum(new_entries))
+
+# Bug Fix
+# temp = [10, 20, 30]
+# file = open("file.txt", "w")
+# file.writelines(str(temp))
+
+temps = [10, 20, 30]
+temps = [str(temp) + "\n" for temp in temps]
+file = open("file.txt", "w")
+
+file.writelines(temps)
+
+
+# Bug Fix
+numbers = [10.1, 12.3, 14.7]
+
+numbers = [int(item) for item in numbers]
+
+print(numbers)
