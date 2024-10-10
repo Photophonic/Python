@@ -10,6 +10,8 @@ while True:
             user_val = input("Enter a To Do: ") + "\n"
 
             # revised read file using WITH context manager
+            # can use r to force path as a raw string
+            # open(r"section_notes\myfiles\doc.txt", "r")
             with open("app01_todo\list.txt", "r") as file:
                 todo = file.readlines()
 

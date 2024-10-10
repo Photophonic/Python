@@ -238,3 +238,56 @@ numbers = [10.1, 12.3, 14.7]
 numbers = [int(item) for item in numbers]
 
 print(numbers)
+
+
+# Wil produce an error since the file does not exist
+with open(r"section_notes\myfiles\docs.txt", "r") as file:
+    items = file.read()
+    print(items)
+
+
+# Will open the existing file. Python will add 'r' as default
+with open(r"section_notes\myfiles\doc.txt") as file:
+    items = file.read()
+    print(items)
+
+# items becomes a variable to a closed file in this scope.
+print(items)
+
+
+# Day 8:
+# question 1
+# file = open(r"section_notes\myfiles\doc.txt", "w")
+# file.write("snail")
+# file.close
+
+
+with open(r"section_notes\myfiles\doc.txt", "w") as file:
+    file.write("Test")
+
+
+# question 2
+languages = ["English", "German", "Spanish"]
+
+
+for language in languages:
+    filename = language + ".txt"
+    with open(filename, "a") as file:
+        file.write(language)
+
+# question 3
+with open(r"section_notes\myfiles\story.txt", "r") as file:
+    story = file.read()
+
+
+with open(r"section_notes\myfiles\story_copy.txt", "w") as file:
+    file.write(story)
+
+
+# debug 1
+with open(r"section_notes\myfiles\file.txt", "r") as file:
+    content = file.read()
+
+
+print(content)
+print(len(content))
