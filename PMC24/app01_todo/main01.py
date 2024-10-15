@@ -6,7 +6,7 @@ while True:
 
     # python case statement to compare user_action input
     match user_action.strip():
-        case "add" in user_action :
+        case "add":
             user_val = input("Enter a To Do: ") + "\n"
 
             # revised read file using WITH context manager
