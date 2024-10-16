@@ -291,3 +291,41 @@ with open(r"section_notes\myfiles\file.txt", "r") as file:
 
 print(content)
 print(len(content))
+
+
+# Section 9 questions
+
+# question 1
+password = input("Enter a password: ")
+
+if len(password) >= 7:
+    print("Great password there!")
+else:
+    print("Your password is weak.")
+
+# question 2
+password = input("Enter a password: ")
+
+pw_test = len(password)
+
+if pw_test > 7:
+    print("Great password there")
+elif pw_test == 7:
+    print("Your password is mid ")
+else:
+    print("Your password is weak")
+
+# question 3 & 4
+day_temp = {
+    "morning": (44.2, 22.3, 58.1),
+    "noon": (46.4, 15.7, 95.2),
+    "evening": (40.1, 995.2, 25.5),
+}
+
+
+# question 5, 6, 7
+letters = ["a", "b", "c", "d", "e", "f", "g"]
+
+print(letters[1:4])
+print(letters[:3])
+print(letters[-3:])
