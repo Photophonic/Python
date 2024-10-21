@@ -329,3 +329,42 @@ letters = ["a", "b", "c", "d", "e", "f", "g"]
 print(letters[1:4])
 print(letters[:3])
 print(letters[-3:])
+
+
+# Debugging
+ids = ["XF345_89", "XER76849", "XA454_55"]
+
+x = 0
+
+for id in ids:
+    if "_" in id:
+        x = x + 1
+    print(x)
+# the if needed to be indented
+
+ids = ["XF345_89", "XER76849", "XA454_55"]
+
+x = 0
+
+for id in ids:
+    if "_" in id:
+        x = x + 1
+# print needed to be moved outside of the loop
+print(x)
+
+
+length = float(input("Enter length: "))
+width = float(input("Enter width: "))
+
+
+perimeter = (length + width) * 2
+area = length * width
+
+print("Perimeter is", perimeter)
+print("Area is", area)
+
+# needed to fluo area > to <
+if perimeter < 14 and area < 10:
+    print("OK")
+else:
+    print("Not OK")

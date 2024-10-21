@@ -1,5 +1,10 @@
-letters = ["a", "b", "c", "d", "e", "f", "g"]
+x = 0
 
-print(letters[1:4])
-print(letters[:3])
-print(letters[-3:])
+if len("Hello") == 5:
+    x = x + 1
+elif len("Hello") > 5:
+    x = x + 2
+else:
+    x = x + 3
+
+print(x)
