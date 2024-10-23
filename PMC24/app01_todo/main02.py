@@ -14,19 +14,19 @@ while True:
         # list slicing to extract everything at & acter p4
         action = user_action[4:] + "\n"
 
-        with open("app01_todo\list.txt", "r") as file:
+        with open("app01_todo/list.txt", "r") as file:
             todo = file.readlines()
 
         # add to the list the capitalize user_input
         todo.append(action.title())
 
         # revised write using WITH
-        with open("app01_todo\list.txt", "w") as file:
+        with open("app01_todo/list.txt", "w") as file:
             file.writelines(todo)
 
     elif "show" in user_action:
         # revised read file using WITH context manager
-        with open("app01_todo\list.txt", "r") as file:
+        with open("app01_todo/list.txt", "r") as file:
             todo = file.readlines()
 
         # add enumerate to produce a list and their index
@@ -43,7 +43,7 @@ while True:
         adj_index = edit_item - 1
 
         # open the file
-        with open("app01_todo\list.txt", "r") as file:
+        with open("app01_todo/list.txt", "r") as file:
             todo = file.readlines()
 
         # create a revised version of the to-do
@@ -53,12 +53,12 @@ while True:
         todo[adj_index] = new_todo + "\n"
 
         # write edits to the file
-        with open("app01_todo\list.txt", "w") as file:
+        with open("app01_todo/list.txt", "w") as file:
             file.writelines(todo)
 
     elif "complete" in user_action:
         # open the file
-        with open("app01_todo\list.txt", "r") as file:
+        with open("app01_todo/list.txt", "r") as file:
             todo = file.readlines()
 
         # pop removes using the index value
@@ -69,7 +69,7 @@ while True:
         print(f"{removed_val} has been removed")
 
         # write edits to the file
-        with open("app01_todo\list.txt", "w") as file:
+        with open("app01_todo/list.txt", "w") as file:
             file.writelines(todo)
 
     elif "quit" in user_action:
