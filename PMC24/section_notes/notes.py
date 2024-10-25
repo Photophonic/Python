@@ -367,4 +367,69 @@ print("Area is", area)
 if perimeter < 14 and area < 10:
     print("OK")
 else:
-    print("Not OK")
+    exit("Not OK")
+
+
+# Day 10
+# question 1
+try:
+    total_value = float(input("Enter total value: "))
+    value = float(input("Enter value: "))
+    result = value / total_value * 100
+
+    print(f"That is {result}%")
+
+except ValueError:
+    print("You need tp enter a number. Run the program again")
+
+
+# question 2
+try:
+    total_value = float(input("Enter total value: "))
+    value = float(input("Enter value: "))
+    result = value / total_value * 100
+
+    print(f"That is {result}%")
+
+except ValueError:
+    print("You need tp enter a number. Run the program again")
+
+except ZeroDivisionError:
+    print("Your total value cannot be zero")
+
+# question 3
+colors = [11, 34, 98, 43, 45, 54, 54]
+
+for color in colors:
+    if color > 50:
+        print(color)
+
+# Bug Fix 1
+waiting_list = ["john", "marry"]
+
+name = input("Enter a name: ")
+try:
+    number = waiting_list.index(name)
+    print(f"{name}'s turn in {number}")
+
+except ValueError:
+    print(f"{name} is not in the list")
+
+#  other
+try:
+    "a" + 2
+except TypeError:
+    print("cannot add str to int")
+
+
+print("a" + 2)
+
+
+# Day 11 Functions
+def greet():
+    message = "hello"
+    return message.capitalize()
+
+
+greeting = greet()
+print(greeting)
