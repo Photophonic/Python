@@ -2,19 +2,20 @@
 
 
 # def name(arguments):
-def get_todos():
+def get_todos(filepath):
     # do something here
-    with open("app01_todo/list.txt", "r") as file:
+    with open(filepath, "r") as file:
         todos = file.readlines()
     # return value to the calling code
     return todos
 
 
-def write_todos(list):
-    with open("app01_todo/list.txt", "w") as file:
-        file.writelines(todo)
-
-    return todo
+# this function uses two parameters, path and the list
+def write_todos(filepath, list):
+    # write edits to the file
+    with open(filepath, "w") as file:
+        file.writelines(list)
+    # does not need to retunr anytbing since it updates a file.
 
 
 while True:
@@ -29,21 +30,23 @@ while True:
         # list slicing to extract everything at & acter p4
         action = user_action[4:] + "\n"
 
-        # with open("app01_todo/list.txt", "r") as file:
-        #     todo = file.readlines()
-
         # replace the line above with function call and stored value
-        todo = get_todos()
+        todo = get_todos("app01_todo/list.txt")
 
         # add to the list the capitalize user_input and breakline
         todo.append(action.title())
+
         # revised write using WITH
-        with open("app01_todo/list.txt", "w") as file:
-            file.writelines(todo)
+        # with open("app01_todo/list.txt", "w") as file:
+        #     file.writelines(todo)
+
+        # replace the code above with this new function.
+        # provide the file path and the appended list
+        write_todos("app01_todo/list.txt", todo)
 
     elif user_action.startswith("show"):
         # revised read file using WITH context manager
-        todo = get_todos()
+        todo = get_todos("app01_todo/list.txt")
 
         # add enumerate to produce a list and their index
         for index, item in enumerate(todo):
@@ -60,7 +63,7 @@ while True:
             adj_index = edit_item - 1
 
             # open the file
-            todo = get_todos()
+            todo = get_todos("app01_todo/list.txt")
 
             # create a revised version of the to-do
             new_todo = input("Enter a new To Do: ")
@@ -69,8 +72,7 @@ while True:
             todo[adj_index] = new_todo + "\n"
 
             # write edits to the file
-            with open("app01_todo/list.txt", "w") as file:
-                file.writelines(todo)
+            write_todos("app01_todo/list.txt", todo)
 
         # must provide the type of error to look for.
         except ValueError:
@@ -83,7 +85,7 @@ while True:
     elif user_action.startswith("complete"):
         try:
             # open the file
-            todo = get_todos()
+            todo = get_todos("app01_todo/list.txt")
 
             # pop removes using the index value
             complete_val = int(user_action[8:])
@@ -93,8 +95,7 @@ while True:
             print(f"{removed_val} has been removed")
 
             # write edits to the file
-            with open("app01_todo/list.txt", "w") as file:
-                file.writelines(todo)
+            write_todos("app01_todo/list.txt", todo)
 
         except IndexError:
             print("Enter a valid item in range")

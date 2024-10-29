@@ -433,3 +433,27 @@ def greet():
 
 greeting = greet()
 print(greeting)
+
+
+# Day 11 functions
+# question 1
+def get_max():
+    grades = [9.6, 9.2, 9.7]
+
+    value = max(grades)
+    return value
+
+
+print(get_max())
+
+
+# question 2
+def get_max():
+    grades = [9.6, 9.2, 9.7]
+
+    get_max = max(grades)
+    get_min = min(grades)
+    return f"Max: {get_max}, Min: {get_min}"
+
+
+print(get_max())
