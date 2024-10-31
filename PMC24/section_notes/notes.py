@@ -482,3 +482,121 @@ if meters < 1.0:
     print("too short")
 else:
     print("have fun")
+
+
+def get_feet_inches(feet_inches):
+    imperial = feet_inches.split(" ")
+
+    # assign each list position to a variable
+    feet = float(imperial[0])
+    inches = float(imperial[1])
+
+    return (feet, inches)
+
+
+def convert(feet, inches):
+
+    meters = feet * 0.3048 + inches * 0.0254
+
+    return meters
+
+
+feet_inches = input("Enter the feet and incehs: ")
+
+feet, inches = get_feet_inches(feet_inches)
+
+meters = convert(feet, inches)
+
+print(f"{meters} meters")
+
+if meters < 1.0:
+    print("too short")
+else:
+    print("have fun")
+
+
+# day 12 more functions
+
+
+# question 1
+def liters_to_m3(liters):
+    cubic_meter = liters / 1000
+
+    return cubic_meter
+
+
+print(liters_to_m3(2500))
+
+
+# question 2
+def strength(password):
+
+    results = []
+    pw_message = "Weak Password"
+
+    if len(password) >= 8:
+        results.append(True)
+    else:
+        results.append(False)
+
+    # Use isdigit() method on the string to check for numbers
+    # note, isdigit() cannot be used on a whole string.
+    digit = False
+
+    # use a loop to verify the individual character to check if digit
+    for i in password:
+        if i.isdigit():
+            digit = True
+
+    results.append(digit)
+
+    capital = False
+    for i in password:
+        if i.isupper():
+            capital = True
+
+    if False in results:
+        pw_message = "Weak Password"
+    else:
+        pw_message = "Strong Password"
+
+    return pw_message
+
+
+print(strength("test"))
+
+
+# queston 3
+def num_average(num_list):
+    list_sum = sum(num_list)
+
+    list_avg = list_sum / len(num_list)
+
+    return int(list_avg)
+
+
+print(num_average([10, 20, 30, 40]))
+
+
+# question 4
+def person_name(name):
+    return f"Hi {name}"
+
+
+print(person_name("Lisa"))
+
+
+# question 5
+def str_concat(item1, item2):
+    return item1 + item2
+
+
+print(str_concat("hello", "hi"))
+
+
+# question 6
+def greeting(name):
+    return f"Hi {name.title()}"
+
+
+print(greeting("john"))
