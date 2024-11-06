@@ -1,7 +1,6 @@
-def prepare(text):
-    text = text.title()
-    text = text.strip()
-    return text
+def get_area(x=10):
+    return x * 2
 
 
-print(prepare("hello    "))
+area = get_area(x=1)
+print(area)

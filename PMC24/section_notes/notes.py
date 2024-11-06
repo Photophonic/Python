@@ -600,3 +600,73 @@ def greeting(name):
 
 
 print(greeting("john"))
+
+
+def prepare(text):
+    text = text.title()
+    text = text.strip()
+    return text
+
+
+print(prepare("hello    "))
+
+
+# Day 13 function parameters
+
+
+# Question 1
+def get_age(year_of_birth, current_year=2024):
+    return int(current_year - year_of_birth)
+
+
+print(get_age(1980))
+
+
+#  Question 2
+def get_nr_items(user_input):
+    value = user_input.split(",")
+
+    return len(value)
+
+
+get_nr_items("john,lisa,teresa")
+
+
+# Queston 3
+def area(side_length):
+    return side_length * side_length
+
+
+print(area(7))
+
+
+# Question 4
+def temp(temp_in):
+    if temp_in > 7:
+        return "Warm"
+    else:
+        return "Cold"
+
+
+print(temp(8))
+
+
+# Question 5
+def password_lenght(password):
+    if len(password) >= 8:
+        return True
+    else:
+        return False
+
+
+print(password_lenght("mypass"))
+
+
+# Debug, flip default parameter
+def calculate_time(h, g=9.80665):
+    t = (2 * h / g) ** 0.5
+    return t
+
+
+time = calculate_time(100)
+print(time)
