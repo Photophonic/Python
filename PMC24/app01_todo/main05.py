@@ -1,50 +1,21 @@
-# Custom functions version
+# Modules versioon - Functions now in functions.py file
+from functions import get_todos, write_todos
 
-
-# def name(arguments):
-# set a default argument for the file path
-def get_todos(filepath="app01_todo/list.txt"):
-    # do something here
-    with open(filepath, "r") as file:
-        todos = file.readlines()
-    # return value to the calling code
-    return todos
-
-
-# this function uses two parameters, path and the list
-# default arguments must come after non defaulted values.
-def write_todos(list, filepath="app01_todo/list.txt"):
-    # write edits to the file
-    with open(filepath, "w") as file:
-        file.writelines(list)
-    # does not need to retunr anytbing since it updates a file.
-
+# can also use import function, then in code functions.get_todos()
 
 while True:
     user_action = input("Type add, show, edit, complete, or quit: \n").strip()
 
-    # if "add" in user_action[:3]:
-    # alternate option to validate input
     if user_action.startswith("add"):
-        # revised read file using WITH context manager
 
-        # get action from the user input and strip out add_
         # list slicing to extract everything at & acter p4
         action = user_action[4:] + "\n"
 
-        # replace the line above with function call and stored value
         # update parameter in to use the default argument value
         todo = get_todos()
 
         # add to the list the capitalize user_input and breakline
         todo.append(action.title())
-
-        # revised write using WITH
-        # with open("app01_todo/list.txt", "w") as file:
-        #     file.writelines(todo)
-
-        # replace the code above with this new function.
-        # provide the file path and the appended list
 
         # update parameter to pass in the list. Path is defaulted
         write_todos(todo)

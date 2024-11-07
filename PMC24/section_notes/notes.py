@@ -670,3 +670,11 @@ def calculate_time(h, g=9.80665):
 
 time = calculate_time(100)
 print(time)
+
+
+def get_area(x=10):
+    return x * 2
+
+
+area = get_area(x=1)
+print(area)
