@@ -35,12 +35,6 @@ if False in results:
 else:
     print("Password updated.")
 
-#
-#
-#
-#
-#
-#
 
 # Using dictionaries in this scenario to get key/value pairs for True/False
 password = input("Enter a password: ")

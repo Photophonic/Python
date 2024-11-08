@@ -678,3 +678,55 @@ def get_area(x=10):
 
 area = get_area(x=1)
 print(area)
+
+
+# Day 14 - methods
+
+
+# Question 1
+def water_state(temperature):
+    state = ""
+
+    if temperature <= 0:
+        state = "Solid"
+    elif 0 < temperature < 100:
+        state = "Liquid"
+    else:
+        state = "Gas"
+
+    return state
+
+
+print(water_state(122))
+
+
+# Question 2
+def water_state(temperature):
+    state = ""
+
+    if temperature > 25:
+        state = "Hot"
+    elif 15 <= temperature <= 25:
+        state = "Warm"
+    else:
+        state = "Cold"
+
+    return state
+
+
+print(water_state(15))
+
+
+#  debug
+
+# from functions import count
+# import functions
+
+# nr_of_periods = functions.count("Trees are good. Grass is green.")
+# print(nr_of_periods)
+
+
+from functions import count
+
+nr_of_periods = count("Trees are good. Grass is green.")
+print(nr_of_periods)

@@ -82,3 +82,8 @@ while True:
     else:
         print("Please enter a valid option")
         pass
+
+
+# if __name__ == "__main__":
+#     print("Hello")
+#     print(get_todos())
