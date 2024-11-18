@@ -1,8 +1,10 @@
 # standard practice to break up logical application behavior
+# define constants here and are in uppercase
+FILEPATH = "app01_todo/list.txt"
 
 
-# def name(arguments):
-def get_todos(filepath="app01_todo/list.txt"):
+# def name(arguments): and set default path to the constant above
+def get_todos(filepath=FILEPATH):
     # do something here
     with open(filepath, "r") as file:
         todos = file.readlines()
@@ -11,7 +13,7 @@ def get_todos(filepath="app01_todo/list.txt"):
 
 
 # this function uses two parameters, path and the list
-def write_todos(list, filepath="app01_todo/list.txt"):
+def write_todos(list, filepath=FILEPATH):
     # write edits to the file
     with open(filepath, "w") as file:
         file.writelines(list)

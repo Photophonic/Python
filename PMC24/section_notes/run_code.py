@@ -1,11 +1,6 @@
-# from functions import count
-# import functions
+import webbrowser
 
-# nr_of_periods = functions.count("Trees are good. Grass is green.")
-# print(nr_of_periods)
-
-
-from functions import count
-
-nr_of_periods = count("Trees are good. Grass is green.")
-print(nr_of_periods)
+# replace the spaces to + for the search
+user_term = input("Enter a search term: ").replace(" ", "+")
+# pass search string into search
+webbrowser.open(f"https://bing.com?q={user_term}")

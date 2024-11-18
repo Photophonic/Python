@@ -730,3 +730,54 @@ from functions import count
 
 nr_of_periods = count("Trees are good. Grass is green.")
 print(nr_of_periods)
+
+
+# Day 15 extra notes
+import glob
+
+# requies a str pattern
+myfiles = glob.glob("section_notes/myfiles/*.txt")
+
+# iterate all items returned in myfiles
+for filepath in myfiles:
+    # open each file in read mode
+    with open(filepath, "r") as file:
+        # print the contents of each file
+        print(file.read())
+
+
+# Read weather
+import csv
+
+# open csv as text file to create file object
+with open("section_notes/weather.csv", "r") as file:
+    # .reader() expects a file object as input
+    # creates an iterator object and we convert it to a list
+    data = list(csv.reader(file))
+
+# get input matching a city in the list
+city = input("Enter a city: ")
+
+# iterate over the data object in memory
+# data[1:] = skip first row and print rest.
+for row in data[1:]:
+    # compare input vs first column in data
+    if row[0] == city:
+        # print second column
+        print(row[1])
+
+
+# create a zip file
+import shutil
+
+# provide name of path & file name, type, location
+shutil.make_archive("section_notes/myfiles/output", "zip", "section_notes/myfiles")
+
+
+# browser search
+import webbrowser
+
+# replace the spaces to + for the search
+user_term = input("Enter a search term: ").replace(" ", "+")
+# pass search string into search
+webbrowser.open(f"https://bing.com?q={user_term}")

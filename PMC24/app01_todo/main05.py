@@ -1,7 +1,14 @@
 # Modules versioon - Functions now in functions.py file
+# can also use import function, then in code functions.get_todos()
 from functions import get_todos, write_todos
 
-# can also use import function, then in code functions.get_todos()
+# importing Py Dev modules
+import time
+
+# create formated time based of string values
+now = time.strftime("%b %d, %Y %H:%M:%S")
+
+print(f"It is {now}")
 
 while True:
     user_action = input("Type add, show, edit, complete, or quit: \n").strip()
