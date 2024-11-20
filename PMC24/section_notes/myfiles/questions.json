@@ -1,0 +1,13 @@
+[
+    {"question": "What are dolphins",
+    "choice": ["amphibians", "fish", "mammals", "birds"],
+    "answer": 3},
+
+    {"question": "What are snakes",
+    "choice": ["reptiles", "fish", "mammals", "amphibians"],
+    "answer": 1},
+    
+    {"question": "What are Emu",
+    "choice": ["reptiles", "fish", "mammals", "birds"],
+    "answer": 4}
+]
