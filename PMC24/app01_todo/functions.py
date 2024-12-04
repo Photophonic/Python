@@ -18,3 +18,9 @@ def write_todos(list, filepath=FILEPATH):
     with open(filepath, "w") as file:
         file.writelines(list)
     # does not need to return anytbing since it updates a file.
+
+
+# these will only run if THIS file is run directly
+if __name__ == "__main__":
+    print("hello")
+    print(get_todos())
