@@ -17,16 +17,18 @@ edit_button = sg.Button("Edit")
 
 complete_button = sg.Button("Complete")
 
-# create a window instance,
 # items in layout need to be in brackets. Each pair is a row
+layout = [
+    [label],
+    [input_box, add_button],
+    [list_box, edit_button],
+    [complete_button],
+]
+
+# create a window instance, layout points to the list above
 window = sg.Window(
     "My To Do App",
-    layout=[
-        [label],
-        [input_box, add_button],
-        [list_box, edit_button],
-        [complete_button],
-    ],
+    layout=layout,
     font=("Helvetica", 20),
 )
 
@@ -77,6 +79,8 @@ while True:
         # use the built in code to get close event and break loop
         case sg.WIN_CLOSED:
             break
+            # exit will stop the program here, any additional code is ignored
+            # exit()
 
 # close the application when we close the window
 window.close()

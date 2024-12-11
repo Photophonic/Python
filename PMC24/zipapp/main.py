@@ -8,13 +8,13 @@ import shutil
 label1 = sg.Text("Select files to zip")
 input_box1 = sg.Input(tooltip="File location")
 # allows selection of multiple files in a location
-add_button1 = sg.FilesBrowse("Choose")
+add_button1 = sg.FilesBrowse("Choose", key="select_btn")
 
 
 label2 = sg.Text("Select file destination ")
 input_box2 = sg.Input(tooltip="File location")
 # use to select the folder location
-add_button2 = sg.FolderBrowse("Choose")
+add_button2 = sg.FolderBrowse("Choose", key="destination_btn")
 
 
 # create button to zip files
@@ -30,8 +30,19 @@ window = sg.Window(
         [zip_button],
     ],
 )
-# display the list of objects from the window
-window.read()
+
+
+while True:
+    # display the list of objects from the window
+    event, values = window.read()
+    print("Event - ", event)
+    print("Values - ", values)
+    # get the file patch from the K/V pair above. Will need to split the string with split
+    filepath = values["select_btn"].split(";")
+    # get the folder path from the destination button dest_btn
+    folder = values["destination_btn"]
+    print("filepath - ", filepath)
+    print("folder - ", folder)
 # close the application when we close the window
 window.close()
 
