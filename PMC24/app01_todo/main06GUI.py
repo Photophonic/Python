@@ -4,6 +4,7 @@ import functions
 
 # create a series of new elements for the GUI
 label = sg.Text("Enter a To-Do")
+
 # key sets the ID for the input box and is how it is referenced
 # do_not_clear=False, will clear the input field after button action
 input_box = sg.Input(tooltip="Enter a To-Do", key="todo_input")
@@ -13,16 +14,19 @@ add_button = sg.Button("Add")
 list_box = sg.Listbox(
     values=functions.get_todos(), key="todos_list", enable_events=True, size=[45, 10]
 )
+
 edit_button = sg.Button("Edit")
 
 complete_button = sg.Button("Complete")
+
+exit_button = sg.Button("Exit")
 
 # items in layout need to be in brackets. Each pair is a row
 layout = [
     [label],
     [input_box, add_button],
-    [list_box, edit_button],
-    [complete_button],
+    [list_box, edit_button, complete_button],
+    [exit_button],
 ]
 
 # create a window instance, layout points to the list above
@@ -53,11 +57,8 @@ while True:
         case "Edit":
             # point to the value to edit, using [0] will get only the string value
             todo_to_edit = values["todos_list"][0]
-            print(todo_to_edit)
             # grab the new value from the top entry field
             new_todo = values["todo_input"]
-            print(new_todo)
-
             # get current to_do list
             todos = functions.get_todos()
             # get selected item's index
@@ -68,13 +69,26 @@ while True:
             functions.write_todos(todos)
             # call update method on window. Use "todos" key for list_box, update it with the todos
             window["todos_list"].update(values=todos)
-        # when you click on an item in the list get the value
+
+        case "Complete":
+            todo_to_complete = values["todos_list"][0]
+            # get current to_do list
+            todos = functions.get_todos()
+            # .remove() is a list function, pass in selected value to remove from list vs finding index and pop
+            todos.remove(todo_to_complete)
+            # write to the list with revised list of todos
+            functions.write_todos(todos)
+            # call update method on window to recise list
+            window["todos_list"].update(values=todos)
+            # update the input box todo_input
+            window["todo_input"].update(value="")
+        case "Exit":
+            break
+
+            # when you click on an item in the list get the value
         case "todos_list":
             # select the input box and update with the value from the lists window.
             window["todo_input"].update(value=values["todos_list"][0])
-
-        case "Complete":
-            print("Test")
 
         # use the built in code to get close event and break loop
         case sg.WIN_CLOSED:
