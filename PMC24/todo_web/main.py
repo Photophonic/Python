@@ -9,6 +9,7 @@ if not os.path.exists("todos.txt"):
         # don't write anything to the file
         pass
 
+
 sg.theme("Black")
 
 label = sg.Text("Enter a To-Do")

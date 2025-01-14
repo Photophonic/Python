@@ -21,17 +21,27 @@ zip_button = sg.Button("Zip Files")
 # create success message
 output_msg = sg.Text(key="output")
 
+
+# allign using columns
+col1 = sg.Column([[label1], [label2]])
+col2 = sg.Column([[input_box1], [input_box2]])
+col3 = sg.Column([[add_button1], [add_button2]])
+
 # create a window instance,
 # items in layout need to be in brackets. Each pair is a row
-window = sg.Window(
-    "File Zip",
-    layout=[
-        [label1, input_box1, add_button1],
-        [label2, input_box2, add_button2],
-        [zip_button, output_msg],
-    ],
-)
+# window = sg.Window(
+#     "File Zip",
+#     layout=[
+#         [label1, input_box1, add_button1],
+#         [label2, input_box2, add_button2],
+#         [zip_button, output_msg],
+#     ],
+# )
 
+# render page with column layout
+window = sg.Window(
+    "Arcive Extractor", layout=[[col1, col2, col3], [[zip_button, output_msg]]]
+)
 
 while True:
     # display the list of objects from the window
